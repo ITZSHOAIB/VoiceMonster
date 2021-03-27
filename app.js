@@ -73,7 +73,7 @@ function generateObstacle(){
             gameDisplay.removeChild(obstacle);
             gameDisplay.removeChild(topObstacle);
         }
-        if( obstacleLeft > 40 && obstacleLeft < (40 + ((60/screenWidth) *100)) &&
+        if( obstacleLeft > 40 && obstacleLeft < (40 + ((35/screenWidth) *100)) &&
            ( birdBottom < (obstacleBottom + 40 ) || birdBottom > (100 - 40 - obstracleTop) ) ||
             birdBottom < 15){
             clearInterval(timerId)
