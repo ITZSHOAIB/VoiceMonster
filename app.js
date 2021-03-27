@@ -65,7 +65,7 @@ function generateObstacle(){
         }
         if(score%5000 == 0){
             initialSpeed += 0.5;
-            initialInterval -= 100;
+            initialInterval -= 200;
             gravity += 0.02;
         }
         if(obstacleLeft < -2){
