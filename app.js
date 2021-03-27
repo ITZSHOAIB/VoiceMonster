@@ -9,10 +9,10 @@ const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 
 let score = 0;
-let initialSpeed = 7;
+let initialSpeed = 3;
 let initialInterval = 2000;
 let birdLeft = 40;
-let birdBottom = 35;
+let birdBottom = 55;
 let gravity = 0.4; 
 isGameOver = false;
 let audioIntensity = 0;
@@ -31,7 +31,7 @@ let gameTimerId = setInterval(startGame, 20);
 
 function jump(){
     if(birdBottom < 100 && audioIntensity > 10)
-        birdBottom = Math.round(audioIntensity/1.2) + 20;
+        birdBottom = Math.round(audioIntensity/1.001) + 20;
     bird.style.bottom = birdBottom + '%';
 }
 

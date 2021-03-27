@@ -36,14 +36,14 @@ body{
 }
 .obstacle{
     background-color: #969696;
-    width: 50px;
+    width: 10px;
     height: 40%;
     position: absolute;
 }
 
 .topObstacle{
     background-color: #969696;
-    width: 50px;
+    width: 10px;
     height: 40%;
     position: absolute;
 }
