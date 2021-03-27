@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.game-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sky{
+    background-color: rgb(38, 42, 46);
+    width: 100%;
+    height: 85%;
+}
+
+.ground{
+    background-color: brown;
+    width: 100%;
+    height: 15%;
+    z-index: 1;
+}
+
+.bird{
+    position: absolute;
+    height: 45px;
+    width: 60px;
+    z-index: 2;
+}
+.bird > img {
+    height: 60px;
+}
+.obstacle{
+    background-color: #969696;
+    width: 50px;
+    height: 40%;
+    position: absolute;
+}
+
+.topObstacle{
+    background-color: #969696;
+    width: 50px;
+    height: 40%;
+    position: absolute;
+}
+.score{
+    color: #cecece;
+    font-size: 40px;
+    font-weight: bolder;
+    position: absolute;
+    top: 5;
+    left: 5;
+}
+
+.game-over {
+    z-index: 99;
+    color: #cacaca;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #424242f7;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over > h2 {
+    color: #ef5757;
+    font-size: 50px!important;
+    margin: 5px;
+    font-size: 20px;
+}
+.game-over > div{
+    font-size: 28px;
+}
+.game-over > p{
+    color: #828282;
+}
