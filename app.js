@@ -31,7 +31,7 @@ let gameTimerId = setInterval(startGame, 20);
 
 function jump(){
     if(birdBottom < 100 && audioIntensity > 20)
-        birdBottom = Math.round(audioIntensity/1.01) + 20;
+        birdBottom = Math.round(audioIntensity/1.1) + 20;
     bird.style.bottom = birdBottom + '%';
 }
 
