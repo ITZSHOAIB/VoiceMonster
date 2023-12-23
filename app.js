@@ -12,7 +12,6 @@ const screenHeight = window.innerHeight;
 const gameSettings = {
   score: 0,
   initialSpeed: 3,
-  initialInterval: 2000,
   monsterBottom: 55,
   gravity: 0.4,
   isGameOver: false,
@@ -22,7 +21,6 @@ const gameSettings = {
 const resetGame = () => {
   gameSettings.score = 0;
   gameSettings.initialSpeed = 3;
-  gameSettings.initialInterval = 2000;
   gameSettings.monsterBottom = 55;
   gameSettings.gravity = 0.4;
   gameSettings.isGameOver = false;
@@ -35,7 +33,6 @@ const resetGame = () => {
 };
 
 function applyGravity() {
-  //   console.log(gameSettings.monsterBottom);
   if (gameSettings.isGameOver) return;
 
   gameSettings.monsterBottom -= gameSettings.gravity;
@@ -51,13 +48,12 @@ function moveObstacle() {
   document.querySelectorAll(".obstacle").forEach(move);
   document.querySelectorAll(".topObstacle").forEach(move);
   function move(element) {
-    element.style.left =
-      parseInt(element.style.left) -
-      (gameSettings.initialSpeed / screenWidth) * 100 +
-      "%";
+    element.style.left = `${
+      parseInt(element.style.left) - gameSettings.initialSpeed / screenWidth
+    }%`;
+
     if (gameSettings.score % 5000 == 0) {
       gameSettings.initialSpeed += 0.5;
-      gameSettings.initialInterval -= 200;
       //   gameSettings.gravity += 0.02;
     }
     if (parseInt(element.style.left) < 1) {
