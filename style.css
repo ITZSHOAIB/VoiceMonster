@@ -1,83 +1,118 @@
-body{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-.game-container{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
-.sky{
-    background-color: rgb(38, 42, 46);
-    width: 100%;
-    height: 85%;
+* {
+  box-sizing: border-box;
 }
 
-.ground{
-    background-color: brown;
-    width: 100%;
-    height: 15%;
-    z-index: 1;
+.game-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.bird{
-    position: absolute;
-    height: 25px;
-    width: 35px;
-    z-index: 2;
-}
-.bird > img {
-    height: 25px;
-}
-.obstacle{
-    background-color: #969696;
-    width: 10px;
-    height: 40%;
-    position: absolute;
+.sky {
+  background-color: rgb(38, 42, 46);
+  width: 100%;
+  height: 85%;
 }
 
-.topObstacle{
-    background-color: #969696;
-    width: 10px;
-    height: 40%;
-    position: absolute;
+.ground {
+  background-color: brown;
+  width: 100%;
+  height: 15%;
+  z-index: 1;
 }
-.score{
-    color: #cecece;
-    font-size: 40px;
-    font-weight: bolder;
-    position: absolute;
-    top: 5;
-    left: 5;
+
+.monster {
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  z-index: 2;
+  left: 40%;
+}
+.monster > img {
+  height: 50px;
+}
+.obstacle {
+  background-color: #969696;
+  width: 30px;
+  height: 40%;
+  position: absolute;
+}
+
+.topObstacle {
+  background-color: #969696;
+  width: 30px;
+  height: 40%;
+  position: absolute;
+}
+.score {
+  color: #cecece;
+  font-size: 2rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 5;
+  left: 5;
 }
 
 .game-over {
-    z-index: 99;
-    color: #cacaca;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #424242f7;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  z-index: 99;
+  color: #cacaca;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #424242f7;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-over > h2 {
-    color: #ef5757;
-    font-size: 50px!important;
-    margin: 5px;
-    font-size: 20px;
+  color: #ef5757;
+  font-size: 50px !important;
+  margin: 5px;
+  font-size: 20px;
 }
-.game-over > div{
-    font-size: 28px;
+.game-over > div {
+  font-size: 28px;
 }
-.game-over > p{
-    color: #828282;
+.game-over > p {
+  color: #828282;
+}
+
+.restart {
+  margin: 40px 0px;
+  padding: 15px 25px;
+  font-size: 16px;
+  background: linear-gradient(to right, #ff00ff, #ff453f);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+.restart:hover {
+  background: #ff453f;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }

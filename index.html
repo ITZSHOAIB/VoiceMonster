@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voice Monster</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/redo.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="game-container">
-        <div class="score"> 
-            Score: <span class="inner-score">0</span>
+      <div class="score">Score: <span class="inner-score">0</span></div>
+      <div class="sky">
+        <div class="monster">
+          <img src="assets/monster.svg" />
         </div>
-        <div class="sky">
-            <div class="bird">
-                <img src="assets/monster.svg" >
-            </div>
-        </div>
-        <div class="ground">
-        </div>
+      </div>
+      <div class="ground"></div>
     </div>
     <div class="game-over">
-        <h2>GAME OVER</h2>
-        <div>Final Score: <span class="final-score">0</span></div>
-        <p>Refresh to Play Again</p>
+      <h2>GAME OVER</h2>
+      <div>Final Score: <span class="final-score">0</span></div>
+      <button class="restart"><i class="gg-redo"></i>Restart</button>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
